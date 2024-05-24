@@ -93,8 +93,32 @@ let num = '10'
 let numInt = +num
 
 console.log(numInt) // 10
+
 */
-
 let challenge = '30 Days Of JavaScript'
+//let companies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
 
-console.log(challenge.substring(0,2))
+console.log(challenge.repeat(2))
+//console.log(companies.split(','))
+let word = 'You cannot end a sentence with because because because is a conjunction'
+console.log(word.substr(31,23))
+
+
+let num = '9.8'
+let numInt = parseInt(num)
+
+console.log(numInt + 1)
+
+
+//let randomNumber = Math.floor(Math.random() * challenge)
+let target = 'JavaScript'
+let targetIndex = challenge.indexOf(target)
+const randomIndex = Math.floor(Math.random() * target.length);
+const randomCharacter = challenge[targetIndex + randomIndex];
+console.log(randomCharacter)
+
+console.log('1 1 1 1 1\n 2 1 2 4 8')
+
+let poet = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
+
+console.log(poet.match(/love/gi))
