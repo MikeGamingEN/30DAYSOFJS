@@ -122,3 +122,10 @@ console.log('1 1 1 1 1\n 2 1 2 4 8')
 let poet = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
 
 console.log(poet.match(/love/gi))
+
+let club
+
+console.log(club)
+
+let empty = null
+console.log(empty)
