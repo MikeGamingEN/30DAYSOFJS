@@ -24,5 +24,5 @@ number > 0
 console.log(4 * 5 ** 2); // 4 * 9
 // Expected output: 36
 
-const agree = confirm('Are you sure you like to delete? ')
-console.log(agree) // result will be true or false based on what you click on the dialog box
+//const agree = confirm('Are you sure you like to delete? ')
+//console.log(agree) // result will be true or false based on what you click on the dialog box

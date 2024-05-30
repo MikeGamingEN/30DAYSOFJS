@@ -70,3 +70,32 @@ const hours = now.getHours()
 const minutes = now.getMinutes()
 
 console.log(`${year}-${month}-${date} ${hours}:${minutes}`)
+function myFunction() {
+let length = prompt("Enter the length of the rectangle:");
+let width = prompt("Enter the width of the rectangle:");
+
+length = parseFloat(length)
+width = parseFloat(width)
+
+const area = length * width
+const perimeter = 2 * (length + width)
+
+console.log("The area of the rectangle is: " + area);
+console.log("The perimeter of the rectangle is: " + perimeter);
+}
+
+// Coordinates of the points
+let x1 = 2;
+let y1 = 2;
+let x2 = 6;
+let y2 = 10;
+
+// Calculate the slope
+let slope = (y2 - y1) / (x2 - x1);
+
+// Output the result
+console.log("The slope between the points (2, 2) and (6, 10) is: " + slope);
+
+
+const PI = 3.14
+let r = prompt()
