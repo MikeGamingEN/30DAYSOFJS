@@ -1,4 +1,4 @@
-const webTechs = [
+//const webTechs = [
     'HTML',
     'CSS',
     'JavaScript',
@@ -6,7 +6,7 @@ const webTechs = [
     'Redux',
     'Node',
     'MongoDB'
-  ] // List of web technologies
+ // ] // List of web technologies
   
   console.log(webTechs)        // all the array items
   console.log(webTechs.length) // => to know the size of the array, which is 7
@@ -105,8 +105,8 @@ const vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot'] // array o
 
 //console.log(fruitsAndVegetables)
 
-const numbers = [1, 2, 3, 4, 5]
-console.log(numbers.indexOf(6))
+//const numbers = [1, 2, 3, 4, 5]
+//console.log(numbers.indexOf(6))
 
 const fruits = ['banana', 'orange', 'mango', 'lemon']
 let index = fruits.indexOf('apple')  // 0
@@ -116,3 +116,27 @@ if(index === -1){
 } else {
     console.log('This fruit does exist in the array')
 }
+
+const numbers = [1, 2, 3, 4, 5]
+console.log(numbers.join()) // 1,2,3,4,5
+
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+
+console.log(names.join()) // Asabeneh,Mathias,Elias,Brook
+console.log(names.join('')) //AsabenehMathiasEliasBrook
+console.log(names.join(' ')) //Asabeneh Mathias Elias Brook
+console.log(names.join(', ')) //Asabeneh, Mathias, Elias, Brook
+console.log(names.join(' # ')) //Asabeneh # Mathias # Elias # Brook
+
+const webTechs = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+] // List of web technologies
+
+console.log(webTechs.join())       // "HTML,CSS,JavaScript,React,Redux,Node,MongoDB"
+console.log(webTechs.join(' # '))  // "HTML # CSS # JavaScript # React # Redux # Node # MongoDB"
