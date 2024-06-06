@@ -1,3 +1,4 @@
+/*
 //const webTechs = [
     'HTML',
     'CSS',
@@ -12,7 +13,7 @@
   console.log(webTechs.length) // => to know the size of the array, which is 7
   console.log(webTechs[0])     //  -> HTML
   console.log(webTechs[6])     //  -> MongoDB
-
+*/
 //const lastIndex = webTechs.length - 1
 //console.log(webTechs[lastIndex])
 /*
@@ -110,15 +111,20 @@ const vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot'] // array o
 
 const fruits = ['banana', 'orange', 'mango', 'lemon']
 let index = fruits.indexOf('apple')  // 0
-
+/*
 if(index === -1){
    console.log('This fruit does not exist in the array')  
 } else {
     console.log('This fruit does exist in the array')
 }
+*/
 
-const numbers = [1, 2, 3, 4, 5]
-console.log(numbers.join()) // 1,2,3,4,5
+index === -1
+? console.log('This fruit does not exist in the array')
+: console.log('This fruit does exist in the array')
+
+//const numbers = [1, 2, 3, 4, 5]
+//console.log(numbers.join()) // 1,2,3,4,5
 
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
 
@@ -127,6 +133,7 @@ console.log(names.join('')) //AsabenehMathiasEliasBrook
 console.log(names.join(' ')) //Asabeneh Mathias Elias Brook
 console.log(names.join(', ')) //Asabeneh, Mathias, Elias, Brook
 console.log(names.join(' # ')) //Asabeneh # Mathias # Elias # Brook
+console.log(names.join( ))
 
 const webTechs = [
   'HTML',
@@ -140,3 +147,48 @@ const webTechs = [
 
 console.log(webTechs.join())       // "HTML,CSS,JavaScript,React,Redux,Node,MongoDB"
 console.log(webTechs.join(' # '))  // "HTML # CSS # JavaScript # React # Redux # Node # MongoDB"
+
+const numbers = [1, 2, 3, 4, 5, 3, 1, 2]
+
+console.log(numbers.lastIndexOf(2)) // 7
+console.log(numbers.lastIndexOf(0)) // -1
+console.log(numbers.lastIndexOf(1)) //  6
+console.log(numbers.lastIndexOf(4)) //  3
+console.log(numbers.lastIndexOf(6)) // -1
+
+const guys = ['Mike', 'Martins', 'Patrick', 'Ebi', 'Lawrence']
+console.log(guys.toString())
+
+const number = [1,2,3,4,5]
+
+console.log(number.slice()) // -> it copies all  item
+console.log(number.slice(0)) // -> it copies all  item
+console.log(number.slice(0, number.length)) // it copies all  item
+console.log(number.slice(2,3)) // -> [2,3,4] // it doesn't include the ending position
+
+const digits = [1, 2, 3, 4, 5]
+console.log(digits.splice(1,6))
+
+const nums = [1, 2, 3, 4, 5, 6]
+ nums.splice(3, 3, 7, 8, 9)
+console.log(nums.splice(3, 3, 7, 8, 9))  // -> [1, 2, 3, 7, 8, 9] //it removes three item and replace three items
+
+// syntax
+const arry  = ['item1', 'item2','item3']
+arry.push('new item')
+console.log(arry)
+// ['item1', 'item2','item3','new item']
+
+const firstNums = [1, 2, 3]
+const secondNums = [1, 4, 9]
+
+const arrayOfArray =  [[1, 2, 3], [1, 2, 3]]
+console.log(arrayOfArray[0]) // [1, 2, 3]
+
+ const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+ const backEnd = ['Node','Express', 'MongoDB']
+ const fullStack = [frontEnd, backEnd]
+ console.log(fullStack)   // [["HTML", "CSS", "JS", "React", "Redux"], ["Node", "Express", "MongoDB"]]
+ console.log(fullStack.length)  // 2
+ console.log(fullStack[0])  // ["HTML", "CSS", "JS", "React", "Redux"]
+ console.log(fullStack[1]) // ["Node", "Express", "MongoDB"]
