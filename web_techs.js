@@ -8,4 +8,3 @@ const webTechs = [
     'MongoDB'
 ]
 
-export default webTechs;

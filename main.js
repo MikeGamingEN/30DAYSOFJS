@@ -248,14 +248,6 @@ if (a > b) {
     console.log(`${a} is less than ${b}`)
 }
 */
-//c 
-//? console.log(`${a} is greater than ${b}`)
-//: console.log(`${a} is less than ${b}`)
-
-
-// main.js
-import countries from './countries.js';
-import webTechs from './web_techs.js';
-
-console.log('Countries:', countries);
-console.log('Web Technologies:', webTechs);
+c 
+? console.log(`${a} is greater than ${b}`)
+: console.log(`${a} is less than ${b}`)

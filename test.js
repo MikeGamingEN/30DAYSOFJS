@@ -61,3 +61,39 @@ shoppingCart.unshift('Meat')
 shoppingCart.push('Sugar')
 shoppingCart[3] = 'Green Tea'
 console.log(shoppingCart)
+
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node','Express', 'MongoDB']
+const fullStack = frontEnd.concat(backEnd)
+console.log(fullStack)
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+// Sort the array
+ages.sort();
+console.log('Sorted ages:', ages);
+
+// Find the min and max age
+const minAge = ages[0];
+const maxAge = ages[ages.length - 1];
+console.log('Min age:', minAge);
+console.log('Max age:', maxAge);
+
+// Find the median age
+const midIndex = Math.floor(ages.length / 2);
+let medianAge;
+if (ages.length % 2 === 0) {
+  medianAge = (ages[midIndex - 1] + ages[midIndex]) / 2;
+} else {
+  medianAge = ages[midIndex];
+}
+console.log('Median age:', medianAge);
+
+// Find the average age
+const totalAge = ages.reduce((sum, age) => sum + age, 0);
+const averageAge = totalAge / ages.length;
+console.log('Average age:', averageAge);
+
+// Find the range of the ages
+const ageRange = maxAge - minAge;
+console.log('Age range:', ageRange);
