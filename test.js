@@ -49,3 +49,15 @@ itCompanies.pop(); // Removes the last element
 console.log(itCompanies); // Output after removing the last element
 itCompanies.length = 0; // Clears the array
 console.log(itCompanies); // Output: []
+
+let text =
+'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+const words = text.split(" ")
+console.log(words)
+console.log(words.length)
+
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+shoppingCart.unshift('Meat')
+shoppingCart.push('Sugar')
+shoppingCart[3] = 'Green Tea'
+console.log(shoppingCart)

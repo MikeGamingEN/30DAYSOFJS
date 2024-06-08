@@ -1,6 +1,6 @@
 //console.log(name, single, age)
 //console.log(typeof 'Variety')
-
+/*
 let firstName = 'Michael'
 let lastName = 'Gbuwe'
 let country = 'Nigeria'
@@ -8,8 +8,8 @@ let age = 20
 let isMarried = false
 let yea = 2024
 
-
 console.log(``)
+*/
 /*
 console.log(typeof firstName)
 console.log(typeof age)
@@ -17,6 +17,7 @@ console.log(typeof isMarried)
 console.log(typeof '10' == 10)
 console.log(parseInt(9.8) == 10)
 */
+/*
 console.log(4 > 3)
 console.log(4 >= 3)
 console.log(4 < 3)
@@ -32,6 +33,7 @@ let python = 'python'
 let jargon = 'jargon'
 
 console.log(python.length !== jargon.length)
+*/
 /*
 const now = new Date()
 console.log(now.getFullYear())
@@ -44,6 +46,7 @@ console.log(now.getMinutes())
 const allSeconds = Date.now()
 console.log(allSeconds)
 */
+/*
 console.log(!(4 > 3))
 console.log(!(4 < 3))
 console.log(!(false))
@@ -62,6 +65,7 @@ let hour = 40
 let ratePerHours = 28
 
 console.log(hour * ratePerHours)
+*/
 /*
 const year = now.getFullYear()
 const month = now.getMonth() + 1
@@ -71,6 +75,7 @@ const minutes = now.getMinutes()
 
 console.log(`${year}-${month}-${date} ${hours}:${minutes}`)
 */
+/*
 function myFunction() {
 let length = prompt("Enter the length of the rectangle:");
 let width = prompt("Enter the width of the rectangle:");
@@ -84,7 +89,7 @@ const perimeter = 2 * (length + width)
 console.log("The area of the rectangle is: " + area);
 console.log("The perimeter of the rectangle is: " + perimeter);
 }
-
+*/
 // Coordinates of the points
 /*
 let x1 = 2;
@@ -98,6 +103,7 @@ let slope = (y2 - y1) / (x2 - x1);
 // Output the result
 console.log("The slope between the points (2, 2) and (6, 10) is: " + slope);
 */
+/*
 function yourFunction() {
 const PI = 3.14
 let r = prompt("Enter the radius:")
@@ -154,6 +160,7 @@ if (isRaining) {
 // No need for a rain coat.
 
 // if else if else
+*/
 /*
 let weather = 'sun'
 if (weather === 'rainy') {
@@ -166,7 +173,7 @@ if (weather === 'rainy') {
   console.log('No need for rain coat.')
 }
 */
-
+/*
 let weather = 'sunny'
 switch (weather)  {
     case 'rainy':
@@ -233,6 +240,7 @@ switch (true) {
 let a = 4
 let b = 3
 let c = a > b
+*/
 /*
 if (a > b) {
     console.log(`${a} is greater than ${b}`)
@@ -240,7 +248,14 @@ if (a > b) {
     console.log(`${a} is less than ${b}`)
 }
 */
-c 
-? console.log(`${a} is greater than ${b}`)
-: console.log(`${a} is less than ${b}`)
+//c 
+//? console.log(`${a} is greater than ${b}`)
+//: console.log(`${a} is less than ${b}`)
 
+
+// main.js
+import countries from './countries.js';
+import webTechs from './web_techs.js';
+
+console.log('Countries:', countries);
+console.log('Web Technologies:', webTechs);
