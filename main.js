@@ -236,11 +236,11 @@ switch (true) {
     console.log('Entered value was not a number');
 }
 }
-
+*/
 let a = 4
 let b = 3
 let c = a > b
-*/
+
 /*
 if (a > b) {
     console.log(`${a} is greater than ${b}`)
@@ -251,3 +251,25 @@ if (a > b) {
 c 
 ? console.log(`${a} is greater than ${b}`)
 : console.log(`${a} is less than ${b}`)
+
+for (let i = 0; i <= 5; i++) {
+  console.log(`${i} * ${i} = ${i * i}`)
+}
+
+for (let i = 5; i >=0; i--) {
+  console.log(i)
+}
+
+const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+const newArr = []
+for(let i = 0; i < countries.length; i++){
+  newArr.push(countries[i].toUpperCase())
+  console.log(newArr)
+}
+
+const numbers = [1, 2, 3, 4, 5]
+let sum = 0
+for (let i = 0; i < numbers.length; i++) {
+  sum = sum + numbers[i]
+}
+console.log(sum)
