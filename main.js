@@ -259,7 +259,7 @@ for (let i = 0; i <= 5; i++) {
 for (let i = 5; i >=0; i--) {
   console.log(i)
 }
-
+/*
 const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
 const newArr = []
 for(let i = 0; i < countries.length; i++){
@@ -273,3 +273,13 @@ for (let i = 0; i < numbers.length; i++) {
   sum = sum + numbers[i]
 }
 console.log(sum)
+*/
+const numbers = [1, 2, 3, 4, 5]
+const newArr = []
+let sum = 0
+for(let i = 0; i < numbers.length; i++){
+  newArr.push( numbers[i] ** 2)
+
+}
+
+console.log(newArr) 
