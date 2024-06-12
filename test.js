@@ -99,9 +99,7 @@ const ageRange = maxAge - minAge;
 console.log('Age range:', ageRange);
 
 let i = 0
-while (i <= 5) {
+do {
   console.log(i)
   i++
-}
-
-// 0 1 2 3 4 5
+} while (i <= 5)
