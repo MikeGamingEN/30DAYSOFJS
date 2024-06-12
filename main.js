@@ -274,6 +274,7 @@ for (let i = 0; i < numbers.length; i++) {
 }
 console.log(sum)
 */
+/*
 const numbers = [1, 2, 3, 4, 5]
 const newArr = []
 let sum = 0
@@ -283,3 +284,12 @@ for(let i = 0; i < numbers.length; i++){
 }
 
 console.log(newArr) 
+*/
+/*
+const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+const newArr = []
+for (let i = 0; i < countries.length; i++) {
+  newArr.push(countries[i].toUpperCase())
+}
+console.log(newArr)
+*/
