@@ -43,3 +43,8 @@ for (const value of arr) {
 for (i = 10; i >= 0; i--) {
     console.log(i)
 }
+
+const n = 6
+for (let n = 0; n <= n; n++) {
+    console.log(n)
+}
