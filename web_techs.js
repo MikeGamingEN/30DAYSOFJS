@@ -39,3 +39,7 @@ console.log('Using for...of:');
 for (const value of arr) {
   console.log(value); // outputs the values 'a', 'b', 'c'
 }
+
+for (i = 10; i >= 0; i--) {
+    console.log(i)
+}
