@@ -62,3 +62,31 @@ console.log('i   i^2   i^3')
 for (let i = 0; i <= 10; i++) {
     console.log(`${i}   ${i ** 2}    ${i ** 3}`)
 }
+
+for (let i = 0; i <= 100; i++) {
+    if (i % 2 !== 0) {
+        console.log(i)
+    }
+}
+
+// Function to check if a number is prime
+function isPrime(num) {
+    if (num <= 1) return false; // 0 and 1 are not prime numbers
+    if (num <= 3) return true; // 2 and 3 are prime numbers
+  
+    if (num % 2 === 0 || num % 3 === 0) return false;
+  
+    for (let i = 5; i * i <= num; i += 6) {
+      if (num % i === 0 || num % (i + 2) === 0) return false;
+    }
+  
+    return true;
+  }
+  
+  // Iterate from 0 to 100 and print only prime numbers
+  for (let i = 0; i <= 100; i++) {
+    if (isPrime(i)) {
+      console.log(i);
+    }
+  }
+  
