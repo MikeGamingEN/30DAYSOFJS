@@ -48,3 +48,17 @@ const n = 6
 for (let i = 0; i <= n; i++) {
     console.log(i)
 }
+
+const m = 7
+for (i = 1; i <= m; i++) {
+    console.log('#'.repeat(i))
+}
+
+for (let i = 0; i <=10; i++) {
+    console.log(`${i} * ${i} = ${i * i}`)
+}
+
+console.log('i   i^2   i^3')
+for (let i = 0; i <= 10; i++) {
+    console.log(`${i}   ${i ** 2}    ${i ** 3}`)
+}
