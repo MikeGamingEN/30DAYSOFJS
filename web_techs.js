@@ -81,12 +81,22 @@ function isPrime(num) {
     }
   
     return true;
-  }
+}
   
   // Iterate from 0 to 100 and print only prime numbers
-  for (let i = 0; i <= 100; i++) {
+for (let i = 0; i <= 100; i++) {
     if (isPrime(i)) {
       console.log(i);
     }
-  }
+}
+
+let sum = 0; // Initialize sum to 0
+
+for (let i = 0; i <= 100; i++) {
+  sum += i; // Add the current value of i to sum
+}
+
+console.log("The sum of all numbers from 0 to 100 is " + sum); // Print the result
+
+
   
