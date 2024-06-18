@@ -113,3 +113,15 @@ for (let i = 0; i <= 100; i++) {
 
 const sums = [sumEvens, sumOdds]
 console.log(sums)
+
+function getRandomNumber() {
+    return Math.floor(Math.random() * 101)
+}
+
+const randomNumbers = []
+
+for (let i = 0; i < 5; i++) {
+    randomNumbers.push(getRandomNumber())
+}
+
+console.log(randomNumbers)
