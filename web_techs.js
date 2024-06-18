@@ -98,5 +98,18 @@ for (let i = 0; i <= 100; i++) {
 
 console.log("The sum of all numbers from 0 to 100 is " + sum); // Print the result
 
+let sumEvens = 0
+let sumOdds = 0
 
-  
+for (let i = 0; i <= 100; i++) {
+    if (i % 2 === 0) { 
+        sumEvens += i
+    } else {
+        sumOdds += i
+    }
+}
+//console.log("The sum of all evens from 0 to 100 is " + sumEvens) 
+//console.log("And the sum of all odds from 0 to 100 is " + sumOdds)
+
+const sums = [sumEvens, sumOdds]
+console.log(sums)
