@@ -192,3 +192,4 @@ console.log(arrayOfArray[0]) // [1, 2, 3]
  console.log(fullStack.length)  // 2
  console.log(fullStack[0])  // ["HTML", "CSS", "JS", "React", "Redux"]
  console.log(fullStack[1]) // ["Node", "Express", "MongoDB"]
+

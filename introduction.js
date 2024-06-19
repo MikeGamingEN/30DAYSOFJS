@@ -59,3 +59,17 @@ console.log(numbers[5])      //  -> 100
 
 let lastIndex = numbers.length - 1;
 console.log(numbers[lastIndex]) // -> 100
+
+const countries = [
+  'Albania', 'Bolivia', 'Canada', 'Denmark', 'Ethiopia', 
+  'Finland', 'Germany', 'Hungary', 'Ireland', 'Japan', 'Kenya'
+];
+
+let longestCountry = countries[0]
+
+for (const country of countries) {
+  if (country.length > longestCountry.length) {
+    longestCountry = country
+  }
+}
+console.log(longestCountry)

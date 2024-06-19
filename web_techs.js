@@ -131,6 +131,8 @@ const countriesInfo = countries.map(countries => [
 countries, countries.slice(0,3).toUpperCase(), countries.length
 ])
 
+const countriesWithLand = countries.filter(countries => countries.includes('land'))
+console.log(countriesWithLand)
 console.log(countriesInfo)
 
 const fullStack = [
@@ -151,3 +153,26 @@ for (let i = fruits.length - 1; i >= 0; i--) {
     reversedFruits.push(fruits[i])
 }
 console.log(reversedFruits)
+
+const technologies = ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
+for (const tech of technologies) {
+    console.log(tech)
+}
+
+const mernStack = ["MongoDB", "Express", "React", "Node"]
+
+let acronym = ''
+
+for (const techs of mernStack) {
+    acronym += techs[0]
+}
+console.log(acronym)
+
+const countriesCopy = countries.slice()
+console.log(countriesCopy)
+console.log(mernStack.sort())
+console.log(webTechs.sort())
+
+const reversedCountries = countries.reverse()
+const capitalizedReversedCountries = reversedCountries.map(countries => countries.toUpperCase())
+console.log(capitalizedReversedCountries)
