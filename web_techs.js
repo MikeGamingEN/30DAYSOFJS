@@ -126,3 +126,28 @@ for (let i = 0; i < 5; i++) {
 
 console.log(randomNumbers)
 
+const countries = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+const countriesInfo = countries.map(countries => [
+countries, countries.slice(0,3).toUpperCase(), countries.length
+])
+
+console.log(countriesInfo)
+
+const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+]
+
+for (let i = 0; i < fullStack.length; i++) {
+    for (let j = 0; j < fullStack[i].length; j++) {
+        console.log(fullStack[i][j].toUpperCase())
+    }
+}
+
+const fruits = ['banana', 'orange', 'mango', 'lemon']
+const reversedFruits = []
+
+for (let i = fruits.length - 1; i >= 0; i--) {
+    reversedFruits.push(fruits[i])
+}
+console.log(reversedFruits)
