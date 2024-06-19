@@ -88,4 +88,22 @@ if (countries.includes('Ethiopia')) {
   for (const tech of webTechs) {
     console.log(tech[0]) // get only the first letter of each element,  H C J R N M
   }
-  
+
+  // Function to generate a random number between 0 and 100
+function getRandomNumber() {
+  return Math.floor(Math.random() * 101);
+}
+
+// Initialize an empty array to store unique random numbers
+const uniqueRandomNumbers = new Set();
+
+// Use a loop to generate 5 unique random numbers
+while (uniqueRandomNumbers.size < 5) {
+  uniqueRandomNumbers.add(getRandomNumber());
+}
+
+// Convert the Set to an array
+const randomNumbersArray = Array.from(uniqueRandomNumbers);
+
+// Print the array of unique random numbers
+console.log(randomNumbersArray);
