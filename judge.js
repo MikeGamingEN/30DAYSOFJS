@@ -147,7 +147,7 @@ const webTechs = [
 
 console.log(webTechs.join())       // "HTML,CSS,JavaScript,React,Redux,Node,MongoDB"
 console.log(webTechs.join(' # '))  // "HTML # CSS # JavaScript # React # Redux # Node # MongoDB"
-
+/*
 const numbers = [1, 2, 3, 4, 5, 3, 1, 2]
 
 console.log(numbers.lastIndexOf(2)) // 7
@@ -168,7 +168,7 @@ console.log(number.slice(2,3)) // -> [2,3,4] // it doesn't include the ending po
 
 const digits = [1, 2, 3, 4, 5]
 console.log(digits.splice(1,6))
-
+*/
 const nums = [1, 2, 3, 4, 5, 6]
  nums.splice(3, 3, 7, 8, 9)
 console.log(nums.splice(3, 3, 7, 8, 9))  // -> [1, 2, 3, 7, 8, 9] //it removes three item and replace three items
@@ -193,3 +193,18 @@ console.log(arrayOfArray[0]) // [1, 2, 3]
  console.log(fullStack[0])  // ["HTML", "CSS", "JS", "React", "Redux"]
  console.log(fullStack[1]) // ["Node", "Express", "MongoDB"]
 
+function sumArrayValues(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+const numbers = [1, 2, 3, 4, 5];
+console.log(sumArrayValues(numbers))
+
+function sumAllNums() {
+  console.log(arguments)
+ }
+ 
+ sumAllNums(1, 2, 3, 4)

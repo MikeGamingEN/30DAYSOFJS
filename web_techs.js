@@ -176,3 +176,34 @@ console.log(webTechs.sort())
 const reversedCountries = countries.reverse()
 const capitalizedReversedCountries = reversedCountries.map(countries => countries.toUpperCase())
 console.log(capitalizedReversedCountries)
+
+
+// functions
+function addTwoNumbers() {
+    numOne = 10
+    numTwo = 30
+    sum = numOne + numTwo
+
+    console.log(sum)
+}
+addTwoNumbers()
+
+function printFullName() {
+    let firstName = 'Michael'
+    let lastName = 'Gbuwe'
+    let space = ' '
+    let fullName = firstName + space + lastName
+    return fullName
+}
+console.log(printFullName())
+
+function areaOfCircle(r) {
+    let area = Math.PI * r * r
+    return area
+}
+console.log(areaOfCircle(10))
+
+function bundClub(firstNam, secondNam) {
+    return `${firstNam} ${secondNam}`
+}
+console.log(bundClub('Bayer', 'Leverkusen'))
