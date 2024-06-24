@@ -117,3 +117,21 @@ function sumAllNums() {
 console.log(sumAllNums(1, 2, 3, 4)) // 10
 console.log(sumAllNums(10, 20, 13, 40, 10))  // 93
 console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40))  // 173
+
+
+// This is how we write normal or declaration function
+// Let us change this declaration function to an arrow function
+function square(n) {
+  return n * n
+}
+
+console.log(square(2)) // 4
+
+const square = n => {
+  return n * n
+}
+
+console.log(square(2))  // -> 4
+
+// if we have only one line in the code block, it can be written as follows, explicit return
+const square = n => n * n  // -> 4
