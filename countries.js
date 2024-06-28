@@ -120,3 +120,36 @@ function generateRandomId(length) {
 
 const randomId = generateRandomId(6);
 console.log(randomId);
+
+const sumAllNums = (...args) => {
+  let sum = 0
+  for (const element of args) {
+    sum += element
+  }
+  return sum
+}
+
+console.log(sumAllNums(1, 2, 3, 4)) 
+console.log(sumAllNums(10, 20, 13, 40, 10))  
+console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)) 
+
+const anonymousFun = function() {
+  console.log(
+    'I am an anonymous function and my value is stored in anonymousFun'
+  )
+}
+
+const square = function(n) {
+  return n * n
+}
+console.log(square(2))
+
+const changeToUpperCase = arr => {
+  const newArr = []
+  for (const element of arr) {
+    newArr.push(element.toUpperCase())
+  }
+  return newArr
+}
+const countriess = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+console.log(changeToUpperCase(countriess))
