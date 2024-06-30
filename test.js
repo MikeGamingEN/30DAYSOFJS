@@ -124,3 +124,37 @@ function showArguments() {
 }
 
 showArguments('JavaScript', 'Python', 'Ruby');
+
+const printFullName = (firstName, lastName) => `${firstName} ${lastName}`
+console.log(printFullName('Michael', 'Gbuwe'))
+
+function greetings(name = 'Mike') {
+  let message = `${name}, welcome to 30 Days Of JavaScript!`
+  return message
+}
+
+console.log(greetings())
+console.log(greetings('Asabeneh'))
+
+function generateFullName(firstNamee = 'Michael', lastNamee = 'Gbuwe') {
+  let space = ' '
+  const fullNamee = firstNamee + space + lastNamee
+  return fullNamee
+}
+console.log(generateFullName())
+console.log(generateFullName('Ebi', 'Akpodewei'))
+
+function calculateAge(birthYear, currentYear = 2024) {
+  let age = currentYear - birthYear
+  return age
+}
+
+console.log('Age: ', calculateAge(2004))
+
+function weightOfObject(mass, gravity = 9.81) {
+  let weight = mass * gravity + ' N' // the value has to be changed to string first
+  return weight
+}
+
+console.log('Weight of an object in Newton: ', weightOfObject(100)) // 9.81 gravity at the surface of Earth
+console.log('Weight of an object in Newton: ', weightOfObject(100, 1.62)) // gravity at surface of Moon
