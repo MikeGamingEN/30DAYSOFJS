@@ -207,3 +207,23 @@ function bundClub(firstNam, secondNam) {
     return `${firstNam} ${secondNam}`
 }
 console.log(bundClub('Bayer', 'Leverkusen'))
+
+function calculateSpeed(distance, time) {
+    if (time === 0) {
+        return "Time cannot be zero"
+    }
+    return distance / time
+}
+let distance = 500
+let time = 50
+
+let speed = calculateSpeed(distance, time)
+console.log(`Speed: ${speed} is meters per second`)
+
+function convertCelciusToFahrenheit(celcius) {
+    let fahrenheit = (celcius * 9/5) + 32
+    return fahrenheit  
+}
+let celcius = 35
+let fahrenheit = convertCelciusToFahrenheit(celcius)
+console.log(convertCelciusToFahrenheit(fahrenheit))

@@ -158,3 +158,17 @@ function weightOfObject(mass, gravity = 9.81) {
 
 console.log('Weight of an object in Newton: ', weightOfObject(100)) // 9.81 gravity at the surface of Earth
 console.log('Weight of an object in Newton: ', weightOfObject(100, 1.62)) // gravity at surface of Moon
+
+function addNumbers (fourthNum, fifthNum) {
+  fourthNum = 4
+  fifthNum = 9
+  let sum = fourthNum + fifthNum
+  return sum
+}
+console.log(addNumbers())
+
+function areaOfTriangle(length, width) {
+  let areaT = length * width
+  return areaT
+}
+console.log(areaOfTriangle(6, 7))
