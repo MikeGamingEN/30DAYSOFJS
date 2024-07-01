@@ -227,3 +227,29 @@ function convertCelciusToFahrenheit(celcius) {
 let celcius = 35
 let fahrenheit = convertCelciusToFahrenheit(celcius)
 console.log(convertCelciusToFahrenheit(fahrenheit))
+
+function checkSeason(month) {
+    // Convert the input month to lowercase to make the function case-insensitive
+    month = month.toLowerCase();
+  
+    // Determine the season based on the month
+    if (month === 'september' || month === 'october' || month === 'november') {
+      return 'Autumn';
+    } else if (month === 'december' || month === 'january' || month === 'february') {
+      return 'Winter';
+    } else if (month === 'march' || month === 'april' || month === 'may') {
+      return 'Spring';
+    } else if (month === 'june' || month === 'july' || month === 'august') {
+      return 'Summer';
+    } else {
+      return 'Invalid month';
+    }
+  }
+  
+  // Example usage:
+  console.log(checkSeason('September')); // Output: Autumn
+  console.log(checkSeason('December'));  // Output: Winter
+  console.log(checkSeason('April'));     // Output: Spring
+  console.log(checkSeason('July'));      // Output: Summer
+  console.log(checkSeason('xyz'));       // Output: Invalid month
+  
