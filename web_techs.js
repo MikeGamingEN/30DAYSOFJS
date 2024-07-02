@@ -252,4 +252,4 @@ function checkSeason(month) {
   console.log(checkSeason('April'));     // Output: Spring
   console.log(checkSeason('July'));      // Output: Summer
   console.log(checkSeason('xyz'));       // Output: Invalid month
-  
+

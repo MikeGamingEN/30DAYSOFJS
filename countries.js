@@ -153,3 +153,76 @@ const changeToUpperCase = arr => {
 }
 const countriess = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
 console.log(changeToUpperCase(countriess))
+
+function solveLinEquationForY(a, b, c, x) {
+  if (b === 0) {
+    return 'The equation is not solvable for y (division by zero)';
+  }
+  let y = -(a * x + c) / b;
+  return y;
+}
+
+// Example usage:
+let a = 2, b = 3, c = -6, x = 1;
+let y = solveLinEquationForY(a, b, c, x);
+console.log(`For x = ${x}, y = ${y}`); // Output: For x = 1, y = 0
+
+function solveQuadratic(a = 0, b = 0, c = 0) {
+  let discriminant = b * b - 4 * a * c;
+  let roots = [];
+
+  if (discriminant > 0) {
+    // Two distinct real roots
+    let root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    let root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+    roots.push(root1, root2);
+  } else if (discriminant === 0) {
+    // One real root
+    let root = -b / (2 * a);
+    roots.push(root);
+  } else {
+    // No real roots, but we can return the complex roots
+    let realPart = -b / (2 * a);
+    let imaginaryPart = Math.sqrt(-discriminant) / (2 * a);
+    roots.push(`${realPart} + ${imaginaryPart}i`, `${realPart} - ${imaginaryPart}i`);
+  }
+
+  return roots;
+}
+
+// Example usage:
+console.log(solveQuadratic()); // {0}
+console.log(solveQuadratic(1, 4, 4)); // {-2}
+console.log(solveQuadratic(1, -1, -2)); // {2, -1}
+console.log(solveQuadratic(1, 7, 12)); // {-3, -4}
+console.log(solveQuadratic(1, 0, -4)); // {2, -2}
+console.log(solveQuadratic(1, -1, 0)); // {1, 0}
+
+function printArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i])
+  }
+}
+const exampleArray = [1, 2, 3, 4, 5, 6]
+printArray(exampleArray)
+
+function showDateTime() {
+  const now = new Date()
+  const year = now.getFullYear()
+  const month = now.getMonth() + 1
+  const day = now.getDate()
+  const hours = now.getHours()
+  const minutes = now.getMinutes()
+
+  const formattedTime = `${month}/${day}/${year} ${hours}:${minutes}`
+  console.log(formattedTime)
+}
+
+showDateTime()
+
+function swapValues(x, y) {
+  return { x: y, y: x}
+}
+
+let swapped = swapValues(3,4)
+console.log(`x => ${swapped.x}, y => ${swapped.y}`)
