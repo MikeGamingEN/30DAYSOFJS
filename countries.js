@@ -61,13 +61,13 @@ if (countries.includes('Ethiopia')) {
   // 1 4 9 16 25
   
   // adding all the numbers in the array
-  let sum = 0
-  for (const num of numbers) {
-    sum = sum + num  
+  //let sum = 0
+  //for (const num of numbers) {
+ //   sum = sum + num  
     // can be also shorten like this, sum += num
     // after this we will use the shorter synthax(+=, -=, *=, /= etc)
-  }
-  console.log(sum) // 15
+ // }
+ // console.log(sum) // 15
   
   const webTechs = [
     'HTML',
@@ -257,3 +257,37 @@ const initialArray = [1, 2, 3]
 const newItem = 4
 const updatedArray = addItem(initialArray, newItem)
 console.log(updatedArray)
+
+function removeItem(arr, item) {
+  const reArray = arr.splice()
+  reArray.pop(item)
+  return reArray
+}
+const initiaArray = [1, 2, 3, 4, 5]
+
+function sumOfNumbers(numberr) {
+  let summ = 0
+  for (let i = 0; i < numberr; i++) {
+    summ += 1
+  }
+  return summ
+}
+const rangeEnd = 5
+const summ = sumOfNumbers(rangeEnd)
+console.log(summ)
+
+function evenAndOdds(number) {
+  let evenCount = 0
+  let oddCount = 0
+
+  for (let i = 0; i <= number; i++) {
+    if (i % 2 === 0) {
+      evenCount++
+    } else {
+      oddCount++
+    }
+  }
+  console.log(`${evenCount}, ${oddCount}`)
+}
+
+evenAndOdds(100)
