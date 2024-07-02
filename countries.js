@@ -226,3 +226,34 @@ function swapValues(x, y) {
 
 let swapped = swapValues(3,4)
 console.log(`x => ${swapped.x}, y => ${swapped.y}`)
+
+function reverseArray(arr) {
+  const reversed = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reversed.push(arr[i]);
+  }
+  return reversed;
+}
+
+// Example usage:
+console.log(reverseArray([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
+console.log(reverseArray(['A', 'B', 'C'])); // ['C', 'B', 'A']
+
+function capitalizeArray(arr) {
+  const capitalizedArray = []
+  for (let i = 0; i < arr.length; i++) {
+    capitalizedArray.push(arr[i].toUpperCase())
+  }
+  return capitalizedArray
+}
+
+function addItem(arr, item) {
+  const newArray = arr.slice(); // Create a copy of the array to avoid mutation
+  newArray.push(item);
+  return newArray;
+}
+
+const initialArray = [1, 2, 3]
+const newItem = 4
+const updatedArray = addItem(initialArray, newItem)
+console.log(updatedArray)
