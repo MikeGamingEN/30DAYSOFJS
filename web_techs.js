@@ -253,3 +253,118 @@ function checkSeason(month) {
   console.log(checkSeason('July'));      // Output: Summer
   console.log(checkSeason('xyz'));       // Output: Invalid month
 
+function surm(...args) {
+    let total = 0
+    for (let i = 0; i < args.length; i++) {
+        total += args[i]
+    }
+    return total
+}
+console.log(surm(1, 2, 3))
+
+// Function to generate a random IPv4 address
+function randomUserIp() {
+    const getRandomOctet = () => Math.floor(Math.random() * 256);
+    return `${getRandomOctet()}.${getRandomOctet()}.${getRandomOctet()}.${getRandomOctet()}`;
+}
+
+console.log(randomUserIp()); 
+
+// Function to generate a random MAC address
+function randomMacAddress() {
+    const getRandomHexPair = () => {
+      const hexPair = Math.floor(Math.random() * 256).toString(16);
+      return hexPair.padStart(2, '0'); // Ensure two digits
+    };
+    
+    return `${getRandomHexPair()}:${getRandomHexPair()}:${getRandomHexPair()}:${getRandomHexPair()}:${getRandomHexPair()}:${getRandomHexPair()}`;
+}
+  
+  
+console.log(randomMacAddress)
+  
+// Function to generate a random user ID
+function userIdGenerator() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const idLength = 7;
+    let id = '';
+  
+    for (let i = 0; i < idLength; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      id += characters[randomIndex];
+    }
+  
+    return id;}
+  
+
+console.log(userIdGenerator())
+/*
+function userIdGeneratedByUser() {
+    const numChars = parseInt(prompt("Enter the number of characters for the id:"))
+    const numIds = parseInt(prompt("Enter the number of IDs to generate:"))
+
+    let ids = ''
+    for (let i = 0; i < numIds; i++) {
+        ids += userIdGenerator(numChars) + '\n'
+    }
+    return ids
+}
+
+console.log(userIdGeneratedByUser())
+*/
+
+function rgbColorGenerator() {
+    const getRandomValue = () => Math.floor(Math.random() * 256)
+    const red = getRandomValue()
+    const green = getRandomValue()
+    const blue = getRandomValue()
+
+    return `rgb(${red}, ${green}, ${blue})`
+}
+
+console.log(rgbColorGenerator())
+
+function arrayOfRgbColors(numColors) {
+    const rgbColors = []
+    for (let i = 0; i < numColors; i++) {
+        rgbColors.push(rgbColorGenerator())
+    }
+    return rgbColors
+}    
+
+console.log(arrayOfRgbColors(4))
+
+// Generating random hex numbers
+function getRandomNewColor() {
+    const hex = Math.floor(Math.random() * 16777215).toString(16);
+    return `#${hex.padStart(6, '0')}`;
+  }
+  
+  function arrayOfHexaColors(numColors) {
+    const hexColors = [];
+    for (let i = 0; i < numColors; i++) {
+      hexColors.push(getRandomNewColor());
+    }
+    return hexColors;
+}
+console.log(arrayOfHexaColors(4))
+
+function convertHexaToRgb(hex) {
+    if (hex.startsWith('#')) hex = hex.slice(1)
+    const bigint = parseInt(hex, 16)
+    const red = (bigint >> 16) & 255;
+    const green = (bigint >> 8) & 255;
+    const blue = bigint & 255;
+  
+    return `rgb(${red},${green},${blue})`;
+}
+console.log(convertHexaToRgb('#a3e12f'))
+
+function convertRgbToHexa(rgb) {
+    const rgbValues = rgb.match(/\d+/g).map(Number);
+    const hex = rgbValues.map(value => value.toString(16).padStart(2, '0')).join('');
+    
+    return `#${hex}`;
+  }
+console.log(convertRgbToHexa('rgb(163,225,47)'))  
+
