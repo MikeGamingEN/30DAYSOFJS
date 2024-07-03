@@ -368,3 +368,29 @@ function convertRgbToHexa(rgb) {
   }
 console.log(convertRgbToHexa('rgb(163,225,47)'))  
 
+function generateHexColor() {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')
+}
+
+function generateRgbColor() {
+    const r = Math.floor(Math.random() * 256)
+    const g = Math.floor(Math.random() * 256)
+    const b = Math.floor(Math.random() * 256)
+
+    return `rgb(${r}, ${g}, ${b})`
+}
+
+function generateColors(type, num) {
+    const colors = []
+
+    for (let i = 0; i < num; i++) {
+        if (type === 'hexa') {
+            colors.push(generateHexColor)
+        } else if(type === 'rgb') {
+            colors.push(generateRgbColor)
+        }
+    }
+    return num === 1 ? colors[0] : colors;
+}
+
+console.log(generateColors('hexa', 3))
