@@ -407,11 +407,42 @@ console.log(shuffleArray([1, 2, 3, 4, 5]))
 */
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1)); // Generate a random index between 0 and i
-        [array[i], array[j]] = [array[j], array[i]];  // Swap elements at indices i and j
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [array[i], array[j]] = [array[j], array[i]];  
     }
     return array;
 }
 
-// Example usage:
 console.log(shuffleArray([1, 2, 3, 4, 5]));
+
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1
+    }
+    return n * factorial(n - 1)
+}
+
+console.log(factorial(5))
+
+function isEmpty(param) {
+    if (param === null || param === undefined) return true
+    if (typeof param === 'string' || Array.isArray(param)) {
+        return param.length === 0
+    }
+    if (typeof param === 'object') {
+        return Object.keys(param).length === 0
+    }
+    return false
+}
+console.log(isEmpty('')); 
+console.log(isEmpty([])); 
+console.log(isEmpty({})); 
+console.log(isEmpty(0));  
+console.log(isEmpty(null));
+console.log(isEmpty('full'))  
+
+function suum(...args) {
+    return args.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+}
+
+console.log(suum(9, 4, 7, 8))
