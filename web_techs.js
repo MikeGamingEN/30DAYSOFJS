@@ -385,12 +385,33 @@ function generateColors(type, num) {
 
     for (let i = 0; i < num; i++) {
         if (type === 'hexa') {
-            colors.push(generateHexColor)
-        } else if(type === 'rgb') {
-            colors.push(generateRgbColor)
+            colors.push(generateHexColor())
+        } else if (type === 'rgb') {
+            colors.push(generateRgbColor())
         }
     }
     return num === 1 ? colors[0] : colors;
 }
 
 console.log(generateColors('hexa', 3))
+/*
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        [array[i], array[j]] = [array[j], array[i]]
+    }
+    return array
+}
+
+console.log(shuffleArray([1, 2, 3, 4, 5]))
+*/
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1)); // Generate a random index between 0 and i
+        [array[i], array[j]] = [array[j], array[i]];  // Swap elements at indices i and j
+    }
+    return array;
+}
+
+// Example usage:
+console.log(shuffleArray([1, 2, 3, 4, 5]));
