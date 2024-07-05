@@ -446,3 +446,85 @@ function suum(...args) {
 }
 
 console.log(suum(9, 4, 7, 8))
+
+function average(array) {
+    for (let item of array) {
+        if (typeof item !== 'number') {
+            return 'All items in the array should be numbers';
+        }
+    }
+    
+    let sum = 0;
+    for (let item of array) {
+        sum += item;
+    }
+    
+    return sum / array.length;
+}
+
+console.log(average([1, 2, 3, 4]))
+console.log(average([1, '2', 3, 4]))
+
+function modifyArray(array) {
+    if (array < 5) {
+        return 'item not found'
+    }
+
+    array[4] = array[4].toUpperCase
+    return array
+}
+console.log(modifyArray('Leverkusen', 'Stuttgart', 'Cologne', 'Mainz', 'Dortmund', 'Frankfurt'))
+
+function isPrime(num) {
+    if (num <= 1) return false;
+    if (num <= 3) return true;
+    
+    if (num % 2 === 0 || num % 3 === 0) return false;
+    
+    for (let i = 5; i * i <= num; i += 6) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
+    }
+    
+    return true;
+}
+console.log(isPrime(24))
+
+function areAllItemsUnique(array) {
+    const set = new Set(array)
+    return set.size === array.length
+}
+
+console.log(areAllItemsUnique[4, 5, 6, 7])
+
+function areAllItemsSameType(array) {
+    if (array.length === 0) return true
+
+    const firstType = typeof array[0]
+    for (let item of array) {
+        if (typeof item !== firstType) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function reverseCountries(countriess) {
+    const countriesCopy = countriess.slice()
+    return countriesCopy.reverse()
+}
+const countriess = ["Albania", "Bolivia", "Canada", "Denmark", "Ethiopia", "Finland", "Germany", "Hungary", "Ireland", "Japan", "Kenya"];
+console.log(reverseCountries(countriess))
+console.log(countriess)
+
+function sevenRandomNumbers() {
+    const uniqueNumbers = new Set()
+
+    while (uniqueNumbers.size < 7) {
+        const randomNumber = Math.floor(Math.random() * 10)
+        uniqueNumbers.add(randomNumber)
+    }
+    return Array.from(randomNumbers)
+}
+
+console.log(sevenRandomNumbers())
