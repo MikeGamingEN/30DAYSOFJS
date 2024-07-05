@@ -78,3 +78,33 @@ const person = {
 
 console.log(person.age)
 console.log(person['phone number'])
+
+person.nationality = 'Canadian'
+person.country = 'Spain'
+person.title = 'Student'
+person.skills.push('Meteor')
+person.skills.push('SasS')
+person.isMarried = true
+
+person.getPersonInfo = function() {
+    let skillsWithoutLastSkill = this.skills
+    .splice(0, this.skills.length - 1)
+    .join(', ')
+    let lastSkill = this.skills.splice(this.skills.length - 1)[0]
+    let skills = `${skillsWithoutLastSkill} and ${lastSkill}`
+    let fullName = this.fullName
+    let statement = `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe knows ${skills}.`
+    return statement
+}
+
+console.log(person)
+console.log(person.getPersonInfo())
+const copyPerson = Object.assign({}, person)
+console.log(copyPerson)
+const keys = Object.keys(copyPerson)
+console.log(keys)
+const values = Object.values(copyPerson)
+console.log(values)
+const entries = Object.entries(copyPerson)
+console.log(entries)
+console.log(copyPerson.hasOwnProperty('name'))
