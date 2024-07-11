@@ -183,3 +183,17 @@ for (const user in users) {
 }
 
 console.log('User with the most skills:', userWithMostSkills)
+
+let loggedInUsersCount = 0
+let usersWith50Points = 0
+
+for (const user in users) {
+    if (users[user].isLoggedIn) {
+        loggedInUsersCount++
+    }
+    if (users[user] >= 50) {
+        usersWith50Points++
+    }
+}
+console.log('Number of logged in users:', loggedInUsersCount);
+console.log('Number of users with 50 or more points:', usersWith50Points);
