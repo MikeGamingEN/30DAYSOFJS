@@ -197,3 +197,26 @@ for (const user in users) {
 }
 console.log('Number of logged in users:', loggedInUsersCount);
 console.log('Number of users with 50 or more points:', usersWith50Points);
+
+const mernStackSkills = ['MongoDB', 'Express', 'React', 'Node']
+const mernDevelopers = []
+
+for (const user in users) {
+    const userSkills = users[user].skills
+    const isMernDeveloper = mernStackSkills.every(skill => userSkills.includes(skill))
+    if (isMernDeveloper) {
+        mernDevelopers.push(user)
+    }
+}
+console.log('MERN stack developers:', mernDevelopers)
+
+const michael = {
+    age: 19,
+    email: 'michaelgbuwe@michael.com',
+    skills: ['HTML', 'CSS', 'React', 'JavaScipt', 'Node'],
+    isLoggedIn: true,
+    points: 60
+}
+const newUsers = { ...users, MyName: michael }
+
+console.log('New users object:', newUsers)
