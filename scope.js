@@ -468,3 +468,14 @@ function cube(callback, n) {
     return callback(n) * n
 }
 console.log(cube(callback, 3))
+
+const numbers = [1, 2, 3, 4, 5]
+const sumArray = arr => {
+   let sum = 0
+   arr.forEach(function(element) {
+    sum += element
+   })
+   return sum
+}
+
+console.log(sumArray(numbers))
