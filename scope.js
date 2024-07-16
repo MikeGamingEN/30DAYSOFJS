@@ -459,3 +459,12 @@ likeProduct('aegfal', 'newuser123');
   
 console.log(users);
 console.log(products);
+
+const callback = (n) => {
+    return n ** 2
+}
+
+function cube(callback, n) {
+    return callback(n) * n
+}
+console.log(cube(callback, 3))
