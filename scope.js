@@ -522,3 +522,20 @@ const nations = [
   //Explicit return arrow function
   const countriesToUpperCase = countries.map(country => country.toUpperCase());
   */
+
+const countriesFirstThreeLetters = nations.map((nation) =>
+    nation.toUpperCase().slice(0, 3)
+)
+const countriesEndsByia = nations.filter((nation) => nation.endsWith('ia'))
+console.log(countriesEndsByia)
+
+const scores = [
+    { name: 'Asabeneh', score: 95 },
+    { name: 'Lidiya', score: 98 },
+    { name: 'Mathias', score: 80 },
+    { name: 'Elias', score: 50 },
+    { name: 'Martha', score: 85 },
+    { name: 'John', score: 100 },
+]
+const scoresGreaterThan80 = scores.filter(score => score.score > 80)
+console.log(scoresGreaterThan80)
