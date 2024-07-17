@@ -479,3 +479,8 @@ const sumArray = arr => {
 }
 
 console.log(sumArray(numbers))
+
+function sayHello() {
+    console.log('Hello')
+}
+setTimeout(sayHello, 2000)
