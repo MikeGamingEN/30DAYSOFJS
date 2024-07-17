@@ -484,3 +484,41 @@ function sayHello() {
     console.log('Hello')
 }
 setTimeout(sayHello, 2000)
+/*
+arr.forEach(function (element, index, arr) {
+    console.log(index, element, arr)
+  })
+  // The above code can be written using arrow function
+arr.forEach((element, index, arr) => {
+    console.log(index, element, arr)
+})
+  // The above code can be written using arrow function and explicit return
+arr.forEach((element, index, arr) => console.log(index, element, arr))
+*/
+const cities = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland']
+cities.forEach((element) => console.log(element.toUpperCase()))
+
+const nations = [
+    'Albania',
+    'Bolivia',
+    'Canada',
+    'Denmark',
+    'Ethiopia',
+    'Finland',
+    'Germany',
+    'Hungary',
+    'Ireland',
+    'Japan',
+    'Kenya',
+  ]
+  const countriesToUpperCase = nations.map((nation) => nation.toUpperCase())
+  console.log(countriesToUpperCase)
+  
+  /*
+  // Arrow function
+  const countriesToUpperCase = countries.map((country) => {
+    return country.toUpperCase();
+  })
+  //Explicit return arrow function
+  const countriesToUpperCase = countries.map(country => country.toUpperCase());
+  */
