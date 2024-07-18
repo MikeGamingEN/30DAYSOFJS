@@ -539,3 +539,16 @@ const scores = [
 ]
 const scoresGreaterThan80 = scores.filter(score => score.score > 80)
 console.log(scoresGreaterThan80)
+
+const digits = [1, 2, 3, 4, 5]
+const sum = digits.reduce((acc, cur) => acc + cur, 0)
+
+console.log(sum)
+
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const areAllStr = names.every((name) => typeof name === 'string') // Are all strings?
+
+console.log(areAllStr)
+
+const result = names.find((name) => name.length > 7)
+console.log(result)
