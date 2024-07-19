@@ -479,11 +479,12 @@ const sumArray = arr => {
 }
 
 console.log(sumArray(numbers))
-
+/*
 function sayHello() {
     console.log('Hello')
 }
 setTimeout(sayHello, 2000)
+*/
 /*
 arr.forEach(function (element, index, arr) {
     console.log(index, element, arr)
@@ -552,3 +553,7 @@ console.log(areAllStr)
 
 const result = names.find((name) => name.length > 7)
 console.log(result)
+
+const bools = [true, true, false, false, false]
+const areSomeTrue = bools.some((b) => b === true)
+console.log(areSomeTrue)
