@@ -557,3 +557,13 @@ console.log(result)
 const bools = [true, true, false, false, false]
 const areSomeTrue = bools.some((b) => b === true)
 console.log(areSomeTrue)
+
+const grocreries = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
+console.log(grocreries.sort())
+
+const integers = [9.81, 3.14, 100, 37]
+console.log(integers.sort())
+integers.sort(function (a, b) {
+  return a - b
+})
+console.log(integers)
