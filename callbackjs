@@ -13,6 +13,39 @@ const products = [
 const callback = (n) => {
     return n ** 2
 }
-countries.forEach((elemrnt) => {console.log(elemrnt)})
-names.forEach((elemrnt) => {console.log(elemrnt)})
-numbers.forEach((elemrnt) => {console.log(elemrnt)})
+//countries.forEach((elemrnt) => {console.log(elemrnt)})
+//names.forEach((elemrnt) => {console.log(elemrnt)})
+//numbers.forEach((elemrnt) => {console.log(elemrnt)})
+const countriesToUpperCase = countries.map((country) => country.toUpperCase())
+console.log(countriesToUpperCase)
+const countriesLength = countries.map((country) => country.length)
+console.log(countriesLength)
+const numbersToSquare = numbers.map((number) => number ** 2)
+console.log(numbersToSquare)
+const countriesWithLand = countries.filter((country) => country.endsWith('land'))
+console.log(countriesWithLand)
+const countriesWIthSixChar = countries.filter((country) => country.length > 6)
+console.log(countriesWIthSixChar)
+function getStringLists(arr) {
+    return arr.filter(item => typeof item === 'string');
+}
+  
+const mixedArray = [1, 'hello', true, 'world', 42, 'JavaScript', null, 'function'];
+const stringArray = getStringLists(mixedArray)
+console.log(stringArray)
+
+const sumOfNums = numbers.reduce((a, b) => a + b, 0)
+console.log(sumOfNums)
+  
+const sentence = countries.reduce((accumulator, country, index, array) => {
+    if (index === 0) {
+      return country;
+    } else if (index === array.length - 1) {
+      return accumulator + ', and ' + country;
+    } else {
+      return accumulator + ', ' + country;
+    }
+}, '');
+
+const finalSentence = sentence + 'are north European Countries'
+console.log(finalSentence)
