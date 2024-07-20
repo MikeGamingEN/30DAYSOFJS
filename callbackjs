@@ -15,3 +15,4 @@ const callback = (n) => {
 }
 countries.forEach((elemrnt) => {console.log(elemrnt)})
 names.forEach((elemrnt) => {console.log(elemrnt)})
+numbers.forEach((elemrnt) => {console.log(elemrnt)})
