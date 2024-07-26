@@ -49,3 +49,8 @@ const sentence = countries.reduce((accumulator, country, index, array) => {
 
 const finalSentence = sentence + 'are north European Countries'
 console.log(finalSentence)
+const areSomeGreat = names.some((n) => n.length > 7)
+console.log(areSomeGreat)
+
+const containLand = countries.every((country) => country.includes('land'))
+console.log(containLand)
