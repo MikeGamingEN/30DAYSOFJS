@@ -54,3 +54,10 @@ console.log(areSomeGreat)
 
 const containLand = countries.every((country) => country.includes('land'))
 console.log(containLand)
+
+const totalPrices = products
+.filter(product => typeof product.price === 'number' && !isNaN(product.price))
+.map(product => product.price)
+.reduce((acc, price) => acc + price, 0)
+
+console.log(totalPrices)
