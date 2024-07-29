@@ -61,3 +61,132 @@ const totalPrices = products
 .reduce((acc, price) => acc + price, 0)
 
 console.log(totalPrices)
+
+const totalPrice = products.reduce((acc, product) => {
+    const price = parseFloat(product.price);
+    return !isNaN(price) ? acc + price : acc;
+}, 0);
+  
+console.log(totalPrice)
+
+function categorizeCountries(pattern) {
+    return countries.filter(country => country.toLowerCase().includes(pattern.toLowerCase()))
+}
+console.log(categorizeCountries('land'))
+
+function countCountriesByStartingLetter() {
+    const letterCounts = {}
+    countries.forEach(country => {
+        const firstLetter = country[0].toUpperCase()
+        if (letterCounts[firstLetter]) {
+            letterCounts[firstLetter]++
+        } else {
+            letterCounts[firstLetter] = 1
+        }
+        return Object.entries(letterCounts).map(([letter, count]) => ({ letter, count }));
+    })
+}
+console.log(countCountriesByStartingLetter())
+
+const getFirstThreeCountries = arr => {
+    return arr.slice(0, 3)
+}
+console.log(getFirstThreeCountries(countries))
+const lastThreeCountries = arr => {
+    return arr.splice(2, 5)
+}
+console.log(lastThreeCountries(countries))
+// Using different functional programming methods
+const getFirstTenCountriesFunctional = (arr) => {
+    return arr.filter((_, index) => index < 10);
+};
+
+/*
+const findMostFrequentInitial = (countries) => {
+  const initialCount = {};
+
+  // Count the occurrences of each initial letter
+  countries.forEach(country => {
+    const initial = country[0];
+    if (initialCount[initial]) {
+      initialCount[initial]++;
+    } else {
+      initialCount[initial] = 1;
+    }
+  });
+
+  // Find the initial letter with the highest count
+  let maxCount = 0;
+  let mostFrequentInitial = '';
+
+  for (const initial in initialCount) {
+    if (initialCount[initial] > maxCount) {
+      maxCount = initialCount[initial];
+      mostFrequentInitial = initial;
+    }
+  }
+
+  return mostFrequentInitial;
+};
+
+const mostFrequentInitial = findMostFrequentInitial(countries);
+console.log(`The most frequent initial is: ${mostFrequentInitial}`);
+*/
+
+const countriess = [
+    {
+      name: 'Afghanistan',
+      capital: 'Kabul',
+      population: 27657145
+    },
+    {
+      name: 'Albania',
+      capital: 'Tirana',
+      population: 2886026
+    },
+    {
+      name: 'Algeria',
+      capital: 'Algiers',
+      population: 40400000
+    },
+    {
+      name: 'Andorra',
+      capital: 'Andorra la Vella',
+      population: 78014
+    },
+    {
+      name: 'Angola',
+      capital: 'Luanda',
+      population: 25868000
+    },
+    // Add more countries as needed
+];
+  
+const sortByName = (countriess) => {
+    return countriess.sort((a, b) => {
+      if (a.name < b.name) return -1;
+      if (a.name > b.name) return 1;
+      return 0;
+    });
+};
+  
+const sortByCapital = (countriess) => {
+    return countriess.sort((a, b) => {
+      if (a.capital < b.capital) return -1;
+      if (a.capital > b.capital) return 1;
+      return 0;
+    });
+};
+  
+const sortByPopulation = (countriess) => {
+    return countriess.sort((a, b) => a.population - b.population);
+};
+  
+console.log("Sorted by Name:");
+console.log(sortByName([...countriess])); // Using spread operator to avoid modifying the original array
+  
+console.log("Sorted by Capital:");
+console.log(sortByCapital([...countriess]));
+  
+console.log("Sorted by Population:");
+console.log(sortByPopulation([...countriess]));
