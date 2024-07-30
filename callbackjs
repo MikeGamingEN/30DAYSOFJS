@@ -310,4 +310,54 @@ console.log('Variance:', statistics.var());
 console.log('Standard Deviation:', statistics.std());
 console.log('Frequency Distribution:', statistics.freqDist());
 console.log(statistics.describe());
-  
+
+const companies = new Set()
+console.log(companies)
+
+const languages = [
+    'English',
+    'Finnish',
+    'English',
+    'French',
+    'Spanish',
+    'English',
+    'French',
+]
+const setOfLanguages = new Set(languages)
+console.log(setOfLanguages)
+for (const language of setOfLanguages) {
+    console.log(language)
+}
+companies.add('Google')
+companies.add('Microsoft')
+console.log(companies.size)
+console.log(companies)
+
+const digits = [5, 3, 2, 5, 5, 9, 4, 5]
+const setOfNumbers = new Set(digits)
+console.log(digits.size)
+console.log(setOfNumbers)
+
+let a = [1, 2, 3, 4, 5]
+let b = [3, 4, 5, 6]
+let c = [...a, ...b]
+
+let A = new Set(a)
+let B = new Set(b)
+let C = new Set(c)
+/* let c = a.filter((num) => B.has(num))
+let C = new Set(c) */
+console.log(C)
+// diff of sets
+/* 
+let a = [1, 2, 3, 4, 5]
+let b = [3, 4, 5, 6]
+
+let A = new Set(a)
+let B = new Set(b)
+
+let c = a.filter((num) => !B.has(num))
+let C = new Set(c)
+
+console.log(C)
+*/
