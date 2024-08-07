@@ -372,4 +372,11 @@ console.log(map.size)
 
 for (const [country, city] of countriesMap){
     console.log(country, city)
-   }
+}
+
+const numberSet = new Set()
+
+for (let number = 0; number <= 10; number++) {
+    numberSet.add(number)
+}
+console.log(numberSet)
