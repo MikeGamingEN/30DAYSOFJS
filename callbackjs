@@ -361,6 +361,7 @@ let C = new Set(c)
 
 console.log(C)
 */
+/*
 countries = [
   ['Finland', 'Helsinki'],
   ['Sweden', 'Stockholm'],
@@ -386,6 +387,7 @@ const mySet = new Set([1, 2, 3, 4, 5])
 mySet.delete(3)
 
 console.log(mySet)
+*/
 /*
 const countries = ["Germany", "France", "Italy", "Spain", "Portugal"]
 
@@ -474,3 +476,44 @@ console.log(mostSpokenLanguages(countries, 10));
 console.log(mostSpokenLanguages(countries, 3));
 // Output will be based on the example countries array
 */
+
+const students = ['Asabeneh', 'Brook', 'David', 'John']
+let [firstPerson, secondPerson, thirdPerson, fourthPerson] = students
+
+console.log(firstPerson, secondPerson,thirdPerson, fourthPerson)
+
+const fullStack = [
+  ['HTML', 'CSS', 'JS', 'React'],
+  ['Node', 'Express', 'MongoDB']
+]
+const [frontEnd, backEnd] = fullStack
+
+console.log(frontEnd)
+console.log(backEnd)
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let [num1, num2, num3, ...rest] = nums
+
+console.log(num1, num2, num3)
+console.log(rest)
+
+/* 
+Destructuring during iteration
+.........
+const fullStack = [
+  ['HTML', 'CSS', 'JS', 'React'],
+  ['Node', 'Express', 'MongoDB']
+]
+
+for(const [first, second, third] of fullStack) {
+console.log(first, second, third)
+}
+*/
+const rectangle = {
+  width: 20,
+  height: 10,
+  area: 200
+}
+let { width, height, area, perimeter } = rectangle
+
+console.log(width, height, area, perimeter)
